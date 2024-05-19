@@ -49,16 +49,16 @@ def user_select_script():
             
 user_select_script
 
-# Print to serial prompt to select script, then print output of script to serial:
-serial_write = serial.Serial('/dev/ttyS0')  # open serial port
-print(serial_write.name)         # check which port was really used
-serial_write.write(b'hello')     # write a string
-serial_write.close()             # close port
+# # Print to serial prompt to select script, then print output of script to serial:
+# serial_write = serial.Serial('/dev/ttyS0')  # open serial port
+# print(serial_write.name)         # check which port was really used
+# serial_write.write(b'hello')     # write a string
+# serial_write.close()             # close port
 
 
-# Read:
-with serial.Serial('/dev/ttyS0', 9600, timeout=1) as ser:
-     x = ser.read()          # read one byte
-     s = ser.read(10)        # read up to ten bytes (timeout)
-     line = ser.readline()   # read a '\n' terminated line
-ser.close()             # close port
+# # Read:
+# with serial.Serial('/dev/ttyS0', 9600, timeout=1) as ser:
+#      x = ser.read()          # read one byte
+#      s = ser.read(10)        # read up to ten bytes (timeout)
+#      line = ser.readline()   # read a '\n' terminated line
+# ser.close()             # close port
